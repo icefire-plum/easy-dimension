@@ -1,19 +1,3 @@
-# easy-mark
+# easy-dimension
+## 一款基于canvas 的对元素进行标注的插件
 
-## Project setup
-```
-npm install
-```
-
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
-
-### Compiles and minifies for production
-```
-npm run build
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).

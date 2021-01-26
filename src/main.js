@@ -3,6 +3,11 @@ import App from './App.vue'
 import router from './router'
 import store from './store'
 
+// 引入easy-mark
+import easyMark from '../packages'
+
+Vue.use(easyMark)
+
 Vue.config.productionTip = false
 
 new Vue({

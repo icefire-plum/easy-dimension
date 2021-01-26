@@ -1,12 +1,44 @@
 <template>
   <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </div>
-    <router-view/>
+    <div id="easy-mark" class="easy-mark"> </div>
   </div>
 </template>
+
+<script>
+  export default {
+    mounted() {
+      // 初始化dom
+      this.$easyMark.init('easy-mark')
+      // 画线
+      const lineOption = {
+        points: [
+          { x: 100, y: 100},
+          { x: 200, y: 200},
+          { x: 300, y: 300},
+          { x: 400, y: 400},
+          { x: 500, y: 500}
+        ],
+        lineDash: [3,3]
+      }
+      this.$easyMark.drawLine(lineOption)
+      // 曲线
+      const cureOption = {
+        points: [
+          { x: 100, y: 100},
+          { x: 200, y: 300},
+          { x: 320, y: 340},
+          { x: 400, y: 200},
+          { x: 500, y: 150}
+        ],
+        lineDash: [3,3]
+      }
+      this.$easyMark.drawCure(cureOption)
+
+
+
+    }
+  }
+</script>
 
 <style lang="scss">
 #app {
@@ -16,17 +48,9 @@
   text-align: center;
   color: #2c3e50;
 }
-
-#nav {
-  padding: 30px;
-
-  a {
-    font-weight: bold;
-    color: #2c3e50;
-
-    &.router-link-exact-active {
-      color: #42b983;
-    }
-  }
+.easy-mark {
+  width: 1000px;
+  height: 1000px;
+  border: 1px solid #ccc;
 }
 </style>
