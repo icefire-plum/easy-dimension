@@ -4,7 +4,7 @@ import router from './router'
 import store from './store'
 
 // 引入easy-mark
-import easyMark from '../packages'
+import easyDi from '../packages'
 
 Vue.use(easyMark)
 
