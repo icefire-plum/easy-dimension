@@ -1,7 +1,8 @@
 {
   "name": "easy-dimension",
-  "version": "0.0.1",
+  "version": "0.0.5",
   "private": false,
+  "main": "lib/easyDimension.umd.min.js",
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",

@@ -3,7 +3,7 @@ import line from './line/index'
 import cure from './cure/index'
 
 
-class EasyMark {
+class EasyDimension {
     constructor() {
         this.ctx = ''
     }
@@ -34,4 +34,4 @@ class EasyMark {
 }
 
 
-export default easyDimension
+export default EasyDimension
