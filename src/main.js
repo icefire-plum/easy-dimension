@@ -4,9 +4,9 @@ import router from './router'
 import store from './store'
 
 // 引入easy-mark
-import easyMark from '../packages'
+import easyDimension from '../packages'
 
-Vue.use(easyMark)
+Vue.use(easyDimension)
 
 Vue.config.productionTip = false
 
