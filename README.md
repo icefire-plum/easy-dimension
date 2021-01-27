@@ -7,12 +7,12 @@
 
 ## 使用方法
 
-   main.js
-    ```js
-    import easyDimension from './mark'
+###### `main.js`
 
-    Vue.use(easyDimension)
-    ```
+```javascript
+   import easyDimension from './mark'
+   Vue.use(easyDimension)
+```
 
     hello.vue
     ```js
