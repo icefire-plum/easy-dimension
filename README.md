@@ -2,7 +2,8 @@
 ## 一款基于canvas 的对元素进行标注的插件
 
 ## 安装方法
-### npm i easy-dimension -S
+
+>>>npm i easy-dimension -S
 
 ## 使用方法
     main.js
