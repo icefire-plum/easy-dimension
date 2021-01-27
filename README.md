@@ -14,15 +14,16 @@
    Vue.use(easyDimension)
 ```
 
-    hello.vue
-    ```js
+###### `hello.vue`
+
+```javascript
     mounted() {
         // 初始化实例，easy-easyDimension为元素id
         this.$easyDimension.init('easy-easyDimension')
         // 使用实例方法进行标注，具体的方法和配置项如下
         this.$easyMark.drawLine(option)
     }
-    ```
+```
 
 ## 方法及配置项
     | 方法          | 配置项         | 配置参数（默认）                  |
