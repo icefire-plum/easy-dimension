@@ -27,11 +27,15 @@
 
 ## 方法及配置项
 
-|文件夹|说明|
-|--|--|
-|ZBConfigCommon/ |主要基础代码工程。|
-|ZbConfigMain/ |主APP工程|
-|ZbConfigSetup/ |安装向导，已不再提供 |
-|DB/ |用于测试数据库文件夹，默认密码为admin/admin|
-|res/ |零碎的参考资源|
+| 方法          | 配置项         | 配置参数（默认）                  |
+| :-----        | ----:         | :----:                           |
+| drawLine      | points        | 点序列                           |
+|               | lineColor     | 线段颜色（red）                   |
+|               | lineWidth     | 线段宽度（2）                     |
+|               | lineDash      | 线段类型（[]）具体参考https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/setLineDash |
+|drawCure       | points        |点序列                             |
+|               | lineColor     |线段颜色（red）                     |
+|               | lineWidth     |线段宽度（2）                       |
+|               | lineSmooth    |曲线平滑度，0-1间数值（0.2）         |
+|               | lineDash      |线段类型（[]）具体参考https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/setLineDash  |
 
