@@ -8,18 +8,20 @@
 ## 使用方法
 
 ###### main.js
-    ```javascript
+
+```javascript
     import easyDimension from 'easy-dimension'
 
     Vue.use(easyDimension)
-    ```
+```
 
 ###### demo.vue
-    ```html
-        <div id="easy-easyDimension"></div>
-    ```
 
-    ```javascript
+```html
+        <div id="easy-easyDimension"></div>
+```
+
+```javascript
     mounted() {
         // 初始化实例，easy-easyDimension为元素id
         this.$easyDimension.init('easy-easyDimension')
@@ -35,7 +37,7 @@
         }
         this.$easyMark.drawLine(option)
     }
-    ```
+```
 
 ## 方法及配置项
 | 方法          | 配置项         | 配置参数（默认）                  |
