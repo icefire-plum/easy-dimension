@@ -3,7 +3,7 @@
 
 ## 安装方法
 
->>>npm i easy-dimension -S
+  npm i easy-dimension -S
 
 ## 使用方法
     main.js
