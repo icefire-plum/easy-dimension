@@ -28,14 +28,4 @@
 ## 方法及配置项
 
     | 方法          | 配置项         | 配置参数（默认）                  |
-    | :-----        | ----:         | :----:                           |
-    | drawLine      | points        | 点序列                           |
-    |               | lineColor     | 线段颜色（red）                   |
-    |               | lineWidth     | 线段宽度（2）                     |
-    |               | lineDash      | 线段类型（[]）具体参考https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/setLineDash |
-    |drawCure       | points        |点序列                             |
-    |               | lineColor     |线段颜色（red）                     |
-    |               | lineWidth     |线段宽度（2）                       |
-    |               | lineSmooth    |曲线平滑度，0-1间数值（0.2）         |
-    |               | lineDash      |线段类型（[]）具体参考https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/setLineDash  |
 
