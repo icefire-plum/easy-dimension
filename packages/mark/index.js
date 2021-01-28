@@ -31,6 +31,7 @@ class EasyDimension {
             cure(this.ctx, option)
         }
     }
+    // 画
 }
 
 
