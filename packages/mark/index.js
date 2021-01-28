@@ -1,6 +1,7 @@
 import initEasyDimension from './init'
 import line from './line/index'
 import cure from './cure/index'
+import pie from './pie/index'
 
 
 class EasyDimension {
@@ -31,7 +32,12 @@ class EasyDimension {
             cure(this.ctx, option)
         }
     }
-    // 画
+    // 画圆
+    drawPie(option) {
+        if(this.detectCtx()) {
+            pie(this.ctx, option)
+        }
+    }
 }
 
 
