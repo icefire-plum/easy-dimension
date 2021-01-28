@@ -25,8 +25,9 @@ const pie = (ctx, option) => {
         return
     }
     // 非法半径坐标提示
-    if(!radius || typeof radius != Number) {
+    if(!radius || typeof radius != number) {
         console.error('请提供正确的半径！！！')
+        return
     }
     // 线条样式
     // 默认值
