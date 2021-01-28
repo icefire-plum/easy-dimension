@@ -1,6 +1,6 @@
 {
   "name": "easy-dimension",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "private": false,
   "main": "lib/easyDimension.umd.min.js",
   "scripts": {
