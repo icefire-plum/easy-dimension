@@ -8,32 +8,25 @@
   export default {
     mounted() {
       // 初始化dom
-      this.$easyMark.init('easy-mark')
-      // 画线
-      const lineOption = {
-        points: [
-          { x: 100, y: 100},
-          { x: 200, y: 200},
-          { x: 300, y: 300},
-          { x: 400, y: 400},
-          { x: 500, y: 500}
-        ],
-        lineDash: [3,3]
+      this.$easyDimension.init('easy-mark')
+      // 画圆
+      const pieOption = {
+        center: [100,100],
+        radius: 20,
+        periphery: {
+          show: true,
+          color: 'green',
+          lineWidth: 5,
+          lineDash: [3,3],
+        },
+        fill: {
+          show: true,
+          color: 'green'
+        },
+        startAngle: Math.PI * 0.5,
+        endAngle: Math.PI * 1.5
       }
-      this.$easyMark.drawLine(lineOption)
-      // 曲线
-      const cureOption = {
-        points: [
-          { x: 100, y: 100},
-          { x: 200, y: 300},
-          { x: 320, y: 340},
-          { x: 400, y: 200},
-          { x: 500, y: 150}
-        ],
-        lineDash: [3,3]
-      }
-      this.$easyMark.drawCure(cureOption)
-
+      this.$easyDimension.drawPie(pieOption)
 
 
     }
@@ -51,6 +44,7 @@
 .easy-mark {
   width: 1000px;
   height: 1000px;
+  background: #ccc;
   border: 1px solid #ccc;
 }
 </style>
