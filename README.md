@@ -40,17 +40,30 @@
 ```
 
 ## 方法及配置项
-| 方法          | 配置项         | 配置参数（默认）                  |
-| :-----        | :----        | :----:                           |
-| drawLine      | points        | 点序列                           |
-|               | lineColor     | 线段颜色（red）                   |
-|               | lineWidth     | 线段宽度（2）                     |
-|               | lineDash      | 线段类型（[ ]）<br/>具体参考https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/setLineDash |
-|drawCure       | points        |点序列                             |
-|               | lineColor     |线段颜色（red）                     |
-|               | lineWidth     |线段宽度（2）                       |
-|               | lineSmooth    |曲线平滑度，0-1间数值（0.2）         |
-|               | lineDash      |线段类型（[ ]）<br/>具体参考https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/setLineDash  |
+| 方法          |描述           | 配置项              | 配置参数（默认）                        | 类型       | 默认值    |
+| :-----:        |       :---: | :----             | :----:                                  |   :---:    |   :---:   |
+|drawLine       |      线段     | points             | 点序列                                 |Array       |     --    |
+|               |              | lineColor          | 线段颜色（red）                         |String      |red       |
+|               |              | lineWidth          | 线段宽度（2）                           |Number      |2         |
+|               |              | lineDash           | 线段类型（[ ]）<br/>具体参考https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/setLineDash |Array | []|
+|drawCure       |     曲线      | points             |点序列                                   |Array      |--        |
+|               |               | lineColor          |线段颜色（red）                           | String  |red        |
+|               |               | lineWidth          |线段宽度（2）                             |Number    |2          |
+|               |               | lineSmooth         |曲线平滑度，0-1间数值（0.2）               |Number    |0.2        |
+|               |               | lineDash           |线段类型（[ ]                             |Array    |[]         |
+|drawPie        |   画圆(扇形)   | center             |圆心坐标 , 类似[ 30, 50]                  |Array     |--         |
+|               |               | radius             |半径                                      |Number   |--         |
+|               |               | startAngle         |起始角，以弧度计算，默认为0                 |Number   |0          |
+|               |               | endAngle           |结束角，以弧度计算，默认为Math.PI * 2       |Number   |Math.PI * 2 |
+|               |               | clockwise          |圆弧旋转方向，默认逆时针，false 代表顺时针   |Boolean|false     |
+|               |               | periphery          |圆周样式                                   |Object   |--          |
+|               |               | periphery.show      |是否显示圆周线，布尔值，默认为false         |Boolean  |false      |
+|               |               | periphery.color     |圆周线颜色                                |String    |red        |
+|               |               | periphery.lineWidth |圆周线宽度                                |Number    |2          |
+|               |               | periphery.lineDash  |圆周线类型                                |Array     |[]         |
+|               |               | fill                |填充样式                                  |Object    |--         |
+|               |               | fill.show           |是否显示实心圆                             |Boolean   |true       |
+|               |               | fill.color          |实心圆颜色                                |String     |red      |
 
 ### TO DO
 

@@ -34,7 +34,7 @@ const pie = (ctx, option) => {
         // 是否显示
         show: false,
         // 颜色
-        color: 'green',
+        color: 'red',
         // 线宽
         lineWidth: 2,
         // 虚线，空代表实线
