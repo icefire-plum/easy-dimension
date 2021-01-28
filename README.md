@@ -52,3 +52,9 @@
 |               | lineSmooth    |曲线平滑度，0-1间数值（0.2）         |
 |               | lineDash      |线段类型（[ ]）<br/>具体参考https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/setLineDash  |
 
+### TO DO
+
+[ ] 画圆，圆环
+[ ] 画矩形
+[ ] 画一系列点
+[ ] 画文字标注
