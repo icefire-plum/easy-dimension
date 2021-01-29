@@ -3,6 +3,7 @@ import line from './line/index'
 import cure from './cure/index'
 import pie from './pie/index'
 import polygon from './polygon/index'
+import eqlPolygon from './eqlPolygon/index'
 
 
 class EasyDimension {
@@ -43,6 +44,12 @@ class EasyDimension {
     drawPolygon(option) {
         if(this.detectCtx()) {
             polygon(this.ctx, option)
+        }
+    }
+    // 正多变形
+    drawEqlPolygon(option) {
+        if(this.detectCtx()) {
+            eqlPolygon(this.ctx, option)
         }
     }
 }
