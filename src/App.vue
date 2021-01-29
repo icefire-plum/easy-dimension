@@ -11,25 +11,27 @@
       this.$easyDimension.init('easy-mark')
       // 画圆
       const option = {
-        points: [
-          { x: 30, y: 100 },
-          { x: 100, y: 100 },
-          { x: 100, y: 200 },
-          { x: 30, y: 200 },
-        ],
+        center: [100, 100],
+        distance: 100,
+        peak: 3,
+        startAngel: Math.PI * 0.25,
         periphery: {
           show: true,
-          lineWidth: 20,
-          color: 'green',
-          lineDash: [1,5]
+          lineWidth: 1,
+          color: 'red',
+          lineDash: []
         },
         fill: {
-          show: true,
+          show: false,
           color: 'green'
         }
       }
-      this.$easyDimension.drawPolygon(option)
+      this.$easyDimension.drawEqlPolygon(option)
 
+      this.$easyDimension.drawPie({
+        center: [100, 100],
+        radius: 2,
+      })
 
     }
   }
