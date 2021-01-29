@@ -10,23 +10,25 @@
       // 初始化dom
       this.$easyDimension.init('easy-mark')
       // 画圆
-      const pieOption = {
-        center: [100,100],
-        radius: 20,
+      const option = {
+        points: [
+          { x: 30, y: 100 },
+          { x: 100, y: 100 },
+          { x: 100, y: 200 },
+          { x: 30, y: 200 },
+        ],
         periphery: {
           show: true,
+          lineWidth: 20,
           color: 'green',
-          lineWidth: 5,
-          lineDash: [3,3],
+          lineDash: [1,5]
         },
         fill: {
           show: true,
           color: 'green'
-        },
-        startAngle: Math.PI * 0.5,
-        endAngle: Math.PI * 1.5
+        }
       }
-      this.$easyDimension.drawPie(pieOption)
+      this.$easyDimension.drawPolygon(option)
 
 
     }

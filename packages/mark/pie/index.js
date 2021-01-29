@@ -1,6 +1,5 @@
 import merge from 'loadsh/merge'
-
-import illegalConsole from './util'
+import arrDetect from '../../util'
 /**
  * 根据
  * @param {} ctx canvas实例
@@ -21,11 +20,11 @@ const pie = (ctx, option) => {
         clockwise = true
     } = option
     // 非法圆心坐标提示
-    if(illegalConsole(center, '请提供正确的圆心坐标，类似[100, 100]！！！')){
+    if(arrDetect(center, '==2', '请提供正确的圆心坐标，类似[100, 100]！！！')) {
         return
     }
     // 非法半径坐标提示
-    if(!radius || typeof radius != number) {
+    if(!radius || typeof radius != 'number') {
         console.error('请提供正确的半径！！！')
         return
     }

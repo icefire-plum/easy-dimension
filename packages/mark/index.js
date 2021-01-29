@@ -2,6 +2,7 @@ import initEasyDimension from './init'
 import line from './line/index'
 import cure from './cure/index'
 import pie from './pie/index'
+import polygon from './polygon/index'
 
 
 class EasyDimension {
@@ -38,7 +39,12 @@ class EasyDimension {
             pie(this.ctx, option)
         }
     }
-    // 
+    // 画多变形
+    drawPolygon(option) {
+        if(this.detectCtx()) {
+            polygon(this.ctx, option)
+        }
+    }
 }
 
 
