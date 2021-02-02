@@ -1,38 +1,22 @@
 <template>
   <div id="app">
-    <div id="easy-mark" class="easy-mark"> </div>
+    <header>
+      <Header />
+    </header>
+    <section class="body">
+      <Menu class="menu"/>
+      <router-view class="content"></router-view>
+    </section>
   </div>
 </template>
 
 <script>
+  import Header from './views/header/index'
+  import Menu from './views/menu'
   export default {
-    mounted() {
-      // 初始化dom
-      this.$easyDimension.init('easy-mark')
-      // 画圆
-      const option = {
-        center: [100, 100],
-        distance: 100,
-        peak: 3,
-        startAngel: Math.PI * 0.25,
-        periphery: {
-          show: true,
-          lineWidth: 1,
-          color: 'red',
-          lineDash: []
-        },
-        fill: {
-          show: false,
-          color: 'green'
-        }
-      }
-      this.$easyDimension.drawEqlPolygon(option)
-
-      this.$easyDimension.drawPie({
-        center: [100, 100],
-        radius: 2,
-      })
-
+    components: {
+      Header,
+      Menu
     }
   }
 </script>
@@ -45,10 +29,21 @@
   text-align: center;
   color: #2c3e50;
 }
-.easy-mark {
-  width: 1000px;
-  height: 1000px;
-  background: #ccc;
-  border: 1px solid #ccc;
+header {
+  width: 100%;
+  height: 100px;
+}
+.body {
+  width: 100%;
+  height: calc(100% - 100px);
+  display: flex;
+}
+.menu {
+  width: 200px;
+  height: 100%;
+}
+.content {
+  width: calc(100% - 200px);
+  height: 100%;
 }
 </style>

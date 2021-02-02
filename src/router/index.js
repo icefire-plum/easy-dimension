@@ -1,6 +1,7 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
-import Home from '../views/Home.vue'
+import Home from '../views/home/index'
+import menu from '@/util/menu';
 
 Vue.use(VueRouter)
 
@@ -10,15 +11,17 @@ const routes = [
     name: 'Home',
     component: Home
   },
-  {
-    path: '/about',
-    name: 'About',
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
-    component: () => import(/* webpackChunkName: "about" */ '../views/About.vue')
-  }
 ]
+
+// 根据munu菜单成出路由
+const route = menu.map(item => {
+  return {
+    path: '/' + item.route,
+    name: item.component.charAt(0).toUpperCase() + item.component.slice(1),
+    component: () => import(`../views/demo/${item.component}`)
+  }
+})
+routes.push(...route)
 
 const router = new VueRouter({
   mode: 'history',

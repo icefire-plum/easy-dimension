@@ -3,6 +3,8 @@ import App from './App.vue'
 import router from './router'
 import store from './store'
 
+import '@/assets/style/reset.css';
+
 // 引入easy-mark
 import easyDimension from '../packages'
 
