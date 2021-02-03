@@ -17,7 +17,7 @@ const polygon = (ctx, option) => {
         // 是否显示
         show: false,
         // 颜色
-        color: 'red',
+        color: '#76C1A6',
         // 线宽
         lineWidth: 2,
         // 虚线，空代表实线
@@ -27,7 +27,7 @@ const polygon = (ctx, option) => {
     // 填充样式
     const fill = {
         show: true,
-        color: 'red'
+        color: '#76C1A6'
     }
     merge(fill, option.fill)
     // 检测点序列至少包含3个点

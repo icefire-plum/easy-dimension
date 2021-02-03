@@ -8,7 +8,7 @@ const drawLine = (ctx, option) => {
         // 点序列
         points,
         // 线条颜色
-        lineColor = 'red',
+        lineColor = '#76C1A6',
         // 线条宽度
         lineWidth = 2,
         // 是否虚线，[]代表直线，[2,2,2]代表按此格式画虚线，细节参考https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/setLineDash
