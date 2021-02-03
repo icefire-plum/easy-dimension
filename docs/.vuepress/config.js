@@ -1,6 +1,7 @@
 module.exports = {
     // 页面标题
     title: 'easy-dimension',
+    base: '/easy-dimension/',
     // 网页描述
     description: '基于canvas对元素进行标注',
     themeConfig: {
