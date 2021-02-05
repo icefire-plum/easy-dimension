@@ -9,26 +9,17 @@ export default {
     mounted() {
         this.$easyDimension.init('easy-easyDimension')
         const option = {
-            center: [200, 200],
-            // 内外半径, [ 40, 50]
-            radius: 50,
-            // 起始角，以弧度计算，默认从3点种方向开始
-            startAngle: Math.PI * 0,
-            // 结束角，以弧度计算，默认一周结束
-            endAngle: Math.PI * 1,
-            clockwise: true,
-            periphery: {
-                show: true,
-                color: '#8B8878',
-                lineWidth: 2,
-                lineDash: []
-            },
-            fill: {
-                show: true,
-                color: '#00F5FF'
-            }
+            points: [
+                {x: 100, y: 100 },
+                {x: 200, y: 100 },
+                {x: 300, y: 100 },
+                {x: 400, y: 100 },
+                {x: 500, y: 100 }
+            ],
+            radius: 10,
+            color: 'red'
         }
-        this.$easyDimension.drawPie(option)
+        this.$easyDimension.drawPoints(option, 'drawPie')
     }
 }
 </script>

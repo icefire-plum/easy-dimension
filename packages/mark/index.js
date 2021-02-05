@@ -4,6 +4,7 @@ import cure from './cure/index'
 import pie from './pie/index'
 import polygon from './polygon/index'
 import eqlPolygon from './eqlPolygon/index'
+import points from './points/index'
 
 
 class EasyDimension {
@@ -50,6 +51,12 @@ class EasyDimension {
     drawEqlPolygon(option) {
         if(this.detectCtx()) {
             eqlPolygon(this.ctx, option)
+        }
+    }
+    // 一系列点
+    drawPoints(option, callback) {
+        if(this.detectCtx()) {
+            points(this, option, callback)
         }
     }
 }
