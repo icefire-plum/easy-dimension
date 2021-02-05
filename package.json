@@ -8,6 +8,7 @@
     "build": "vue-cli-service build",
     "docs:dev": "vuepress dev docs",
     "docs:build": "vuepress build docs",
+    "deploy": "npm run docs:build && bash deploy.sh",
     "build:lib": "vue-cli-service build --target lib --name easyDimension --dest lib packages/index.js"
   },
   "dependencies": {

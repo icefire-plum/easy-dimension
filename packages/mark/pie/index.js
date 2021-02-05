@@ -9,7 +9,7 @@ const pie = (ctx, option) => {
     const {
         // 圆心,[30, 40]
         center,
-        // 内外半径, [ 40, 50]
+        // 半径
         radius,
         // 起始角，以弧度计算，默认从3点种方向开始
         startAngle = Math.PI * 0,
@@ -34,7 +34,7 @@ const pie = (ctx, option) => {
         // 是否显示
         show: false,
         // 颜色
-        color: 'red',
+        color: '#8B8878',
         // 线宽
         lineWidth: 2,
         // 虚线，空代表实线
@@ -44,7 +44,7 @@ const pie = (ctx, option) => {
     // 填充样式
     const fill = {
         show: true,
-        color: 'red'
+        color: '#00F5FF'
     }
     merge(fill, option.fill)
     ctx.beginPath()

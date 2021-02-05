@@ -38,7 +38,7 @@ module.exports = {
               ]
             },
             {
-              title: '面',
+              title: '多变形',
               path: '/surface/',
               collapsable: false, // 可选的, 默认值是 true,
               sidebarDepth: 0,    // 可选的, 默认值是 1\
@@ -51,6 +51,18 @@ module.exports = {
                   title: '正多边形',
                   path: '/surface/eqlPolyGon'
                 },
+              ]
+            },
+            {
+              title: '圆',
+              path: '/pie/',
+              collapsable: false, // 可选的, 默认值是 true,
+              sidebarDepth: 0,    // 可选的, 默认值是 1\
+              children: [
+                {
+                  title: '正圆',
+                  path: '/pie/circle'
+                }
               ]
             }
         ]
