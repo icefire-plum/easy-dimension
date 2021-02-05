@@ -65,7 +65,11 @@ module.exports = {
                 {
                   title: '正圆',
                   path: '/pie/circle'
-                }
+                },
+                {
+                  title: '椭圆',
+                  path: '/pie/ellipse'
+                },
               ]
             }
         ]
