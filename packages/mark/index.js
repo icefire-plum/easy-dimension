@@ -5,6 +5,7 @@ import pie from './pie/index'
 import polygon from './polygon/index'
 import eqlPolygon from './eqlPolygon/index'
 import points from './points/index'
+import ellipse from './ellipse/index'
 
 
 class EasyDimension {
@@ -57,6 +58,12 @@ class EasyDimension {
     drawPoints(option, callback) {
         if(this.detectCtx()) {
             points(this, option, callback)
+        }
+    }
+    // 椭圆
+    drawEllipse(option) {
+        if(this.detectCtx()) {
+            ellipse(this.ctx, option)
         }
     }
 }

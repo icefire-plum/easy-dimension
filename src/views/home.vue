@@ -9,17 +9,18 @@ export default {
     mounted() {
         this.$easyDimension.init('easy-easyDimension')
         const option = {
-            points: [
-                {x: 100, y: 100 },
-                {x: 200, y: 100 },
-                {x: 300, y: 100 },
-                {x: 400, y: 100 },
-                {x: 500, y: 100 }
-            ],
-            radius: 10,
-            color: 'red'
+            center: [200, 200],
+            radius: [100, 50],
+            rotation: Math.PI * 0.5,
+            startAngle: Math.PI * 1,
+            periphery: {
+                show: true
+            },
+            fill: {
+                show: false
+            }
         }
-        this.$easyDimension.drawPoints(option, 'drawPie')
+        this.$easyDimension.drawEllipse(option)
     }
 }
 </script>

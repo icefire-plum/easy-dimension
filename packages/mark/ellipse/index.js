@@ -1,0 +1,70 @@
+import merge from 'loadsh/merge'
+import arrDetect from '../../util'
+
+/**
+ * 绘制椭圆
+ * @param {*} ctx 
+ * @param {*} option 
+ */
+const ellipse = (ctx, option) => {
+    const {
+        // 圆心,[30, 40]
+        center,
+        // 半径
+        radius,
+        // 旋转弧度
+        rotation = 0,
+        // 起始角，以弧度计算，默认从3点种方向开始
+        startAngle = Math.PI * 0,
+        // 结束角，以弧度计算，默认一周结束
+        endAngle = Math.PI * 2,
+        // 方向，默认逆时针，false 代表顺时针
+        // *** 特别注意：无论顺时针还是逆时针角度的计算都是顺时针方向
+        clockwise = true
+    } = option
+    // 非法圆心坐标提示
+    if(arrDetect(center, '==2', '请提供正确的圆心坐标，类似[100, 100]！！！')) {
+        return
+    }
+    // 非法半径坐标提示
+    if(arrDetect(radius, '==2', '请提供正确的半径，类似[100, 100]！！！')) {
+        return
+    }
+    // 线条样式
+    // 默认值
+    const periphery = {
+        // 是否显示
+        show: false,
+        // 颜色
+        color: '#8B8878',
+        // 线宽
+        lineWidth: 2,
+        // 虚线，空代表实线
+        lineDash: []
+    }
+    merge(periphery, option.periphery)
+    // 填充样式
+    const fill = {
+        show: true,
+        color: '#00F5FF'
+    }
+    merge(fill, option.fill)
+
+    ctx.beginPath()
+    // 设置线条样式
+    ctx.setLineDash(periphery.lineDash)
+    ctx.lineWidth = periphery.lineWidth
+    ctx.strokeStyle = periphery.color
+    // 设置填充样式
+    ctx.fillStyle = fill.color
+    // 绘制形状
+    ctx.ellipse(center[0], center[1], radius[0], radius[1], rotation, startAngle, endAngle, clockwise)
+    if(periphery.show) {
+        ctx.stroke()
+    }
+    if(fill.show) {
+        ctx.fill()
+    }
+}
+
+export default ellipse
