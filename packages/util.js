@@ -21,3 +21,4 @@ const arrDetect = (arr, compareLen, text) => {
 }
 
 export default arrDetect
+    

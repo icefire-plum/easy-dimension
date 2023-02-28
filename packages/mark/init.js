@@ -5,7 +5,7 @@ const generateId = () => {
 }
 
 // 初始化canvas 实例
-const init = (domId) => {
+const init = (domId, _canvasId) => {
     // 如果dom不存在，不能初始化
     if(!domId) {
         console.error('请指定需要标注的dom，否则标注器无法进行标注！')
@@ -16,22 +16,29 @@ const init = (domId) => {
         console.error('请提供正确的dom id!')
         return
     }
+    let canvasId = ''
+    // 新增canvas
+    if(!_canvasId) {
+        // 追加canvas 元素到dom
+        canvasId = generateId()
+        var canvasStr = `<canvas id="${canvasId}" style="position: relative; z-index:1000"></canvas>`
+        dom.innerHTML += canvasStr
+    } else {
+        canvasId = _canvasId
+    }
 
-    // 追加canvas 元素到dom
-    const canvasId = generateId()
-    const canvasStr = `<canvas id="${canvasId}" style="position: relative; z-index:1000"></canvas>`
-    dom.innerHTML += canvasStr
 
     // 获取容器尺寸
-    const containerW = dom.offsetWidth
-    const containerH = dom.offsetHeight
+    let containerW = dom.offsetWidth
+    let containerH = dom.offsetHeight
 
     // 设置画布大小
-    const canvas = document.querySelector(`#${canvasId}`)
+    let canvas = document.querySelector(`#${canvasId}`)
     const ctx = canvas.getContext('2d')
     canvas.setAttribute('width', containerW)
     canvas.setAttribute('height', containerH)
-    return ctx
+    return { ctx, canvasId, containerW,  containerH }
+
 }
 
 export default init

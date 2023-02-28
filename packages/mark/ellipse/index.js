@@ -6,7 +6,7 @@ import arrDetect from '../../util'
  * @param {*} ctx 
  * @param {*} option 
  */
-const ellipse = (ctx, option) => {
+const ellipse = (ctx, canvasW, canvasH, option) => {
     const {
         // 圆心,[30, 40]
         center,

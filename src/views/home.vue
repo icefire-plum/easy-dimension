@@ -27,7 +27,7 @@ export default {
 
 <style lang="scss" scoped>
 .demo {
-    width: 800px;
+    width: 80%;
     height: 400px;
     background: #eee; 
 }
